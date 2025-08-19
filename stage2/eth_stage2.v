@@ -41,14 +41,7 @@ module eth_stage2(
     output reg [7:0]  ip_protocol
     );
   
-  /*
-  // Old test bench   
-    // Parsed fields
-    reg [47:0] dst_mac;
-    reg [47:0] src_mac;
-    reg [15:0] eth_type;
-    */
-    
+ 
     // Byte Counter
     reg [10:0] byte_count;
     reg [7:0] byte_accum [0:13]; // Store first 14 bytes, ethernet header)
@@ -114,41 +107,3 @@ module eth_stage2(
       end
    end
 endmodule
-      
-                
-                /*
-                // Old Test bench
-                            
-                // latch header fields
-            case (byte_count)
-                0: dst_mac[47:40] <= rx_data;
-                1: dst_mac[39:32] <= rx_data;
-                2: dst_mac[31:24] <= rx_data;
-                3: dst_mac[23:16] <= rx_data;
-                4: dst_mac[15:8] <= rx_data;
-                5: dst_mac[7:0] <= rx_data;
-            
-                6: src_mac[47:40] <= rx_data;
-                7: src_mac[39:32] <= rx_data;
-                8: src_mac[31:24] <= rx_data;
-                9: src_mac[23:16] <= rx_data;
-                10: src_mac[15:8] <= rx_data;
-                11: src_mac[7:0] <= rx_data; 
-            
-                12: eth_type[15:8] <= rx_data; 
-                13: eth_type[7:0] <= rx_data;
-         endcase
-         
-            // Forward byte to TX
-            tx_data <= rx_data;
-            tx_en   <= 1;
-         
-            byte_count <= byte_count + 1;
-         end else begin
-         tx_en <= 0;
-         byte_count <= 0;
-      end
-   end
- end
-endmodule
-       */
