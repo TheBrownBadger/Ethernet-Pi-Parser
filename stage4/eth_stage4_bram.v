@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 08/18/2025 07:27:23 PM
-// Design Name: 
-// Module Name: eth_stage4_bram
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
 // Stage 4: Buffer full ethernet frame into BRAM,
 // parse header fields, apply filtering rules,
 // then forward or drop
